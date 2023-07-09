@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  ct3-app:
+    image: difagume/ct3-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_CLIENTVAR: "clientvar"
+    #working_dir: /app
+    #expose:
+    #  - 3000
+    #ports:
+    #  - "3000:3000"
+    environment:
+      - NEXTAUTH_SECRET="629MdXq6Gd"
+      - NEXTAUTH_URL="http://localhost:3000"
+      - DATABASE_URL="file:./db.sqlite"
+  nginx:
+    image: difagume/ct3-app-nginx
+    build:
+      context: ./nginx
+    ports:
+      - 80:80
+      #- 443:443
