@@ -22,13 +22,11 @@ export default function Home() {
           <div className={styles.cardRow}>
             <Link
               className={styles.card}
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
+              href="/about"
             >
-              <h3 className={styles.cardTitle}>First Steps →</h3>
+              <h3 className={styles.cardTitle}>About page →</h3>
               <div className={styles.cardText}>
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
+                Go about page
               </div>
             </Link>
             <Link
